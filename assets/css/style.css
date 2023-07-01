@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;900&display=swap');
+
+:root {
+    --font-color: #f5f1ed;
+    --primary-color: #ea2458;
+    --secundary-color: #9a14cc;
+    
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/mountains-minimal-evening-4k-wv.jpg');
+    background-size: cover;
+    z-index: -3;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/stars-fields-4k-px-1920x1080.jpg');
+    background-size: cover;
+    opacity: 0.4;
+    z-index: -3;
+}
+
+header {
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    border-radius: 20px;
+    background: transparent;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+    z-index: 99;
+}
+
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem 6rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 1.2em;
+    color: var(--font-color);
+    user-select: none;
+}
+
+.box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+}
+
+.nav-list ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.nav-item {
+    margin: 0 20px;
+    list-style: none;
+}
+
+.nav-link {
+    text-decoration: none;
+    font-size: 1.15rem;
+    color: #fff;
+    position: relative;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 20px;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 5px;
+    background: var(--primary-color);
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+
+.nav-link:hover::after {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+.login-button button {
+    width: 90px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(to bottom, rgba(115,40,109,255), rgba(227,39,90,255));
+    transition: .7s ease;
+}
+
+.login-button button:hover {
+    position: relative;
+    bottom: 2px;
+}
+
+.login-button button a {
+    text-decoration: none;
+    color: var(--font-color);
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+.mobile-menu-icon {
+    display: none;
+}
+
+.mobile-menu {
+    display: none;
+}
+
+.box1 {
+    width: 100%;
+    height: 350px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.typing-text {
+    display: inline-block;
+    animation: typing 2s steps(50, end) infinite alternate-reverse;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+    text-shadow: 1px 1px 3px #fff;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+.container {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+}
+
+.estatico {
+    padding-left: 120px;
+    position: relative;
+    top: 65px;
+    font-size: 2rem;
+    font-weight: 500;
+    color: var(--font-color);
+    text-shadow: 1px 1px 3px #00061c;
+}
+
+.estatico p span {
+    font-size: 2rem;
+    color: var(--secundary-color);
+    font-weight: 600;
+}
+
+.dinamico {
+    position: relative;
+    top: 260px;
+    font-size: 2rem;
+    list-style-type: none;
+}
+
+.container2 {
+    width: 50%;
+    display: flex;
+    align-items: end;
+    justify-content: end;
+}
+
+.container2 .image1 {
+    width: 70%;
+    height: 60%;
+    position: relative;
+    top: 95px;
+    filter: drop-shadow(3px 4px 10px #00061c);
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #89135d;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #a015ca;
+    border-radius: 30px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #8f18a0;
+  }
